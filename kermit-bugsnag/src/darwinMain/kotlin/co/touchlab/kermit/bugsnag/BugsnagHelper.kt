@@ -13,12 +13,13 @@ package co.touchlab.kermit.bugsnag
 import co.touchlab.crashkios.transformException
 import co.touchlab.kermit.ExperimentalKermitApi
 import co.touchlab.kermit.Logger
+import co.touchlab.kermit.bugsnag.internal.CrashStorage
 import co.touchlab.kermit.setupUnhandledExceptionHook
 import platform.Foundation.NSUUID
 
 @ExperimentalKermitApi
 fun setupBugsnagExceptionHook(logger: Logger) {
-    setupUnhandledExceptionHook(logger) {
+    setupUnhandledExceptionHook(logger) { unhandledThrowable ->
         val crashId = generateCrashId()
         Bugsnag.leaveBreadcrumbWithMessage(
             "Kotlin Crash",
@@ -28,7 +29,7 @@ fun setupBugsnagExceptionHook(logger: Logger) {
 
         // Does the transformation actually run?  Will a new exception
         // break out of the current breadcrumb trail?
-        transformException( Exception("Brand-new Wrapper Exception", it) ) { name, description, addresses ->
+        transformException( Exception("Brand-new Wrapper Exception", unhandledThrowable) ) { name, description, addresses ->
             Bugsnag.leaveBreadcrumbWithMessage(
                 "Kotlin Crash - inside transformException",
                 mapOf(
@@ -40,7 +41,8 @@ fun setupBugsnagExceptionHook(logger: Logger) {
                 BSGBreadcrumbType.BSGBreadcrumbTypeError
             )
 
-            Bugsnag.notify(BugsnagNSException(addresses, name, description))
+            CrashStorage.writeCrashReport(unhandledThrowable)
+//            Bugsnag.notify(BugsnagNSException(addresses, name, description))
         }
         crashId
     }

@@ -12,11 +12,32 @@ package co.touchlab.kermitsample
 
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.bugsnag.BugsnagLogWriter
+import co.touchlab.kermit.bugsnag.internal.CrashReport
+import co.touchlab.kermit.bugsnag.internal.CrashStorage
 import co.touchlab.kermit.bugsnag.setupBugsnagExceptionHook
+import platform.Foundation.NSApplicationSupportDirectory
+import platform.Foundation.NSFileManager
+import platform.Foundation.NSSearchPathForDirectoriesInDomains
+import platform.Foundation.NSUserDomainMask
 
 @Suppress("unused")
 fun startKermit(){
     //You may want to us a non-global logger in production, but this will work fine.
     Logger.addLogWriter(BugsnagLogWriter())
     setupBugsnagExceptionHook(Logger)
+}
+
+fun readAllCrashes():List<CrashReport> = CrashStorage.readCrashes()
+fun iosDirPath(folder:String):String{
+    val paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, true);
+    val documentsDirectory = paths[0] as String;
+
+    val databaseDirectory = "$documentsDirectory/$folder"
+
+    val fileManager = NSFileManager.defaultManager()
+
+    if (!fileManager.fileExistsAtPath(databaseDirectory))
+        fileManager.createDirectoryAtPath(databaseDirectory, true, null, null); //Create folder
+
+    return databaseDirectory
 }

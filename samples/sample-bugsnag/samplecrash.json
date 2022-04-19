@@ -1,0 +1,232 @@
+{
+  "frames": [
+    {
+      "address": 4380440681,
+      "function": "0   KermitSampleIOS                     0x105183868        kfun:kotlin.Throwable#<init>(kotlin.String?){} + 88 "
+    },
+    {
+      "address": 4380416343,
+      "function": "1   KermitSampleIOS                     0x10517d956        kfun:kotlin.Exception#<init>(kotlin.String?){} + 86 "
+    },
+    {
+      "address": 4380416727,
+      "function": "2   KermitSampleIOS                     0x10517dad6        kfun:kotlin.RuntimeException#<init>(kotlin.String?){} + 86 "
+    },
+    {
+      "address": 4380417863,
+      "function": "3   KermitSampleIOS                     0x10517df46        kfun:kotlin.IllegalStateException#<init>(kotlin.String?){} + 86 "
+    },
+    {
+      "address": 4380242237,
+      "function": "4   KermitSampleIOS                     0x10515313c        kfun:co.touchlab.kermitsample.CrashBot.okCrash#internal + 140 "
+    },
+    {
+      "address": 4380242073,
+      "function": "5   KermitSampleIOS                     0x105153098        kfun:co.touchlab.kermitsample.CrashBot.goCrash3#internal + 56 "
+    },
+    {
+      "address": 4380242495,
+      "function": "6   KermitSampleIOS                     0x10515323e        kfun:co.touchlab.kermitsample.CrashBot.<init>$lambda-0#internal + 238 "
+    },
+    {
+      "address": 4380242589,
+      "function": "7   KermitSampleIOS                     0x10515329c        kfun:co.touchlab.kermitsample.CrashBot.$<init>$lambda-0$FUNCTION_REFERENCE$0.invoke#internal + 60 "
+    },
+    {
+      "address": 4380242813,
+      "function": "8   KermitSampleIOS                     0x10515337c        kfun:co.touchlab.kermitsample.CrashBot.$<init>$lambda-0$FUNCTION_REFERENCE$0.$<bridge-UNN>invoke(){}#internal + 60 "
+    },
+    {
+      "address": 4380241076,
+      "function": "9   KermitSampleIOS                     0x105152cb3        kfun:co.touchlab.kermitsample.CrashBot.internalDispatch#internal + 211 "
+    },
+    {
+      "address": 4380241833,
+      "function": "10  KermitSampleIOS                     0x105152fa8        kfun:co.touchlab.kermitsample.CrashBot.goCrash0#internal + 56 "
+    },
+    {
+      "address": 4380242433,
+      "function": "11  KermitSampleIOS                     0x105153200        kfun:co.touchlab.kermitsample.CrashBot.<init>$lambda-0#internal + 176 "
+    },
+    {
+      "address": 4380242589,
+      "function": "12  KermitSampleIOS                     0x10515329c        kfun:co.touchlab.kermitsample.CrashBot.$<init>$lambda-0$FUNCTION_REFERENCE$0.invoke#internal + 60 "
+    },
+    {
+      "address": 4380242813,
+      "function": "13  KermitSampleIOS                     0x10515337c        kfun:co.touchlab.kermitsample.CrashBot.$<init>$lambda-0$FUNCTION_REFERENCE$0.$<bridge-UNN>invoke(){}#internal + 60 "
+    },
+    {
+      "address": 4380241380,
+      "function": "14  KermitSampleIOS                     0x105152de3        kfun:co.touchlab.kermitsample.CrashBot.internalDispatch1#internal + 211 "
+    },
+    {
+      "address": 4380241913,
+      "function": "15  KermitSampleIOS                     0x105152ff8        kfun:co.touchlab.kermitsample.CrashBot.goCrash1#internal + 56 "
+    },
+    {
+      "address": 4380242455,
+      "function": "16  KermitSampleIOS                     0x105153216        kfun:co.touchlab.kermitsample.CrashBot.<init>$lambda-0#internal + 198 "
+    },
+    {
+      "address": 4380242589,
+      "function": "17  KermitSampleIOS                     0x10515329c        kfun:co.touchlab.kermitsample.CrashBot.$<init>$lambda-0$FUNCTION_REFERENCE$0.invoke#internal + 60 "
+    },
+    {
+      "address": 4380242813,
+      "function": "18  KermitSampleIOS                     0x10515337c        kfun:co.touchlab.kermitsample.CrashBot.$<init>$lambda-0$FUNCTION_REFERENCE$0.$<bridge-UNN>invoke(){}#internal + 60 "
+    },
+    {
+      "address": 4380241076,
+      "function": "19  KermitSampleIOS                     0x105152cb3        kfun:co.touchlab.kermitsample.CrashBot.internalDispatch#internal + 211 "
+    },
+    {
+      "address": 4380240761,
+      "function": "20  KermitSampleIOS                     0x105152b78        kfun:co.touchlab.kermitsample.CrashBot#goCrash(){} + 56 "
+    },
+    {
+      "address": 4380302524,
+      "function": "21  KermitSampleIOS                     0x105161cbb        objc2kotlin.191 + 139 "
+    },
+    {
+      "address": 4380228011,
+      "function": "22  KermitSampleIOS                     0x10514f9aa        $s15KermitSampleIOS11ContentViewV4bodyQrvg7SwiftUI05TupleE0VyAE6ButtonVyAE0E0PAEE4fontyQrAE4FontVSgFQOyAkEE15foregroundColoryQrAE0N0VSgFQOyAkEE10background_9alignmentQrqd___AE9AlignmentVtAeJRd__lFQOyAkEE7paddingyQrAE4EdgeO3SetV_12CoreGraphics7CGFloatVSgtFQOyAE4TextV_Qo__ARQo__Qo__Qo_G_A11_A11_A11_tGyXEfU_yycfU3_ + 58 (/Users/kgalligan/devel/Kermit/samples/sample-bugsnag/KermitSampleIOS/KermitSampleIOS/ContentView.swift:45:24)"
+    },
+    {
+      "address": 140734747509048,
+      "function": "23  SwiftUI                             0x7fff5ca20137     $s7SwiftUI18WrappedButtonStyle33_AEEDD090E917AC57C12008D974DC6805LLV8makeBody13configurationQrAA09PrimitivedE13ConfigurationV_tFyycAHcfu_yycfu0_TA + 16 "
+    },
+    {
+      "address": 140734752778405,
+      "function": "24  SwiftUI                             0x7fff5cf268a4     $s7SwiftUI25PressableGestureCallbacksV8dispatch5phase5stateyycSgAA0D5PhaseOyxG_SbztFyycfU_ + 31 "
+    },
+    {
+      "address": 140734748645211,
+      "function": "25  SwiftUI                             0x7fff5cb3575a     $sIeg_ytIegr_TR + 11 "
+    },
+    {
+      "address": 140734745321991,
+      "function": "26  SwiftUI                             0x7fff5c80a206     $sIeg_ytIegr_TRTA + 16 "
+    },
+    {
+      "address": 140734745629014,
+      "function": "27  SwiftUI                             0x7fff5c855155     $sIeg_ytIegr_TRTA.5492 + 8 "
+    },
+    {
+      "address": 140734748645231,
+      "function": "28  SwiftUI                             0x7fff5cb3576e     $sytIegr_Ieg_TR + 11 "
+    },
+    {
+      "address": 140734748645211,
+      "function": "29  SwiftUI                             0x7fff5cb3575a     $sIeg_ytIegr_TR + 11 "
+    },
+    {
+      "address": 140734745321991,
+      "function": "30  SwiftUI                             0x7fff5c80a206     $sIeg_ytIegr_TRTA + 16 "
+    },
+    {
+      "address": 140734745629025,
+      "function": "31  SwiftUI                             0x7fff5c855160     $sIeg_ytIegr_TRTA.5500 + 8 "
+    },
+    {
+      "address": 140734748488452,
+      "function": "32  SwiftUI                             0x7fff5cb0f303     $s7SwiftUI6UpdateO3endyyFZ + 483 "
+    },
+    {
+      "address": 140734749462435,
+      "function": "33  SwiftUI                             0x7fff5cbfcfa2     $s7SwiftUI19EventBindingManagerC4sendyySDyAA0C2IDVAA0C4Type_pGF + 276 "
+    },
+    {
+      "address": 140734754731088,
+      "function": "34  SwiftUI                             0x7fff5d10344f     $s7SwiftUI18EventBindingBridgeC4send_6sourceySDyAA0C2IDVAA0C4Type_pG_AA0cD6Source_ptFTf4nen_nAA22UIKitGestureRecognizerC_Tg5 + 1808 "
+    },
+    {
+      "address": 140734754724300,
+      "function": "35  SwiftUI                             0x7fff5d1019cb     $s7SwiftUI22UIKitGestureRecognizerC4send025_062C14327F4C9197D92807A7H6DF7F3BLL7touches5event5phaseyShySo7UITouchCG_So7UIEventCAA10EventPhaseOtF + 65 "
+    },
+    {
+      "address": 140734754726249,
+      "function": "36  SwiftUI                             0x7fff5d102168     $s7SwiftUI22UIKitGestureRecognizerC12touchesBegan_4withyShySo7UITouchCG_So7UIEventCtFToTm + 130 "
+    },
+    {
+      "address": 140734754724436,
+      "function": "37  SwiftUI                             0x7fff5d101a53     $s7SwiftUI22UIKitGestureRecognizerC12touchesEnded_4withyShySo7UITouchCG_So7UIEventCtFTo + 39 "
+    },
+    {
+      "address": 140733809103461,
+      "function": "38  UIKitCore                           0x7fff24b31264     -[UIGestureRecognizer _componentsEnded:withEvent:] + 216 "
+    },
+    {
+      "address": 140733815143536,
+      "function": "39  UIKitCore                           0x7fff250f3c6f     -[UITouchesEvent _sendEventToGestureRecognizer:] + 661 "
+    },
+    {
+      "address": 140733809054643,
+      "function": "40  UIKitCore                           0x7fff24b253b2     __47-[UIGestureEnvironment _updateForEvent:window:]_block_invoke + 69 "
+    },
+    {
+      "address": 140733809053757,
+      "function": "41  UIKitCore                           0x7fff24b2503c     -[UIGestureEnvironment _updateForEvent:window:] + 520 "
+    },
+    {
+      "address": 140733814811907,
+      "function": "42  UIKitCore                           0x7fff250a2d02     -[UIWindow sendEvent:] + 5266 "
+    },
+    {
+      "address": 140733814642102,
+      "function": "43  UIKitCore                           0x7fff250795b5     -[UIApplication sendEvent:] + 818 "
+    },
+    {
+      "address": 140733815256303,
+      "function": "44  UIKitCore                           0x7fff2510f4ee     __dispatchPreprocessedEventFromEventQueue + 8682 "
+    },
+    {
+      "address": 140733815266421,
+      "function": "45  UIKitCore                           0x7fff25111c74     __processEventQueue + 8578 "
+    },
+    {
+      "address": 140733815227431,
+      "function": "46  UIKitCore                           0x7fff25108426     __eventFetcherSourceCallback + 239 "
+    },
+    {
+      "address": 140733733850645,
+      "function": "47  CoreFoundation                      0x7fff2036ce14     __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 16 "
+    },
+    {
+      "address": 140733733850381,
+      "function": "48  CoreFoundation                      0x7fff2036cd0c     __CFRunLoopDoSource0 + 179 "
+    },
+    {
+      "address": 140733733847522,
+      "function": "49  CoreFoundation                      0x7fff2036c1e1     __CFRunLoopDoSources0 + 241 "
+    },
+    {
+      "address": 140733733824833,
+      "function": "50  CoreFoundation                      0x7fff20366940     __CFRunLoopRun + 874 "
+    },
+    {
+      "address": 140733733822707,
+      "function": "51  CoreFoundation                      0x7fff203660f2     CFRunLoopRunSpecific + 566 "
+    },
+    {
+      "address": 140733941636307,
+      "function": "52  GraphicsServices                    0x7fff2c995cd2     GSEventRunModal + 138 "
+    },
+    {
+      "address": 140733814513474,
+      "function": "53  UIKitCore                           0x7fff25059f41     -[UIApplication _run] + 927 "
+    },
+    {
+      "address": 140733814532958,
+      "function": "54  UIKitCore                           0x7fff2505eb5d     UIApplicationMain + 100 "
+    },
+    {
+      "address": 4380215551,
+      "function": "55  KermitSampleIOS                     0x10514c8fe        main + 62 (/Users/kgalligan/devel/Kermit/samples/sample-bugsnag/KermitSampleIOS/KermitSampleIOS/AppDelegate.swift:<unknown>)"
+    },
+    {
+      "address": 4386152169,
+      "function": "56  dyld                                0x1056f5ee8        0x0 + 4386152168 "
+    }
+  ]
+}

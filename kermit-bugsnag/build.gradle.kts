@@ -14,6 +14,7 @@
 plugins {
     id("com.android.library")
     kotlin("multiplatform")
+    kotlin("plugin.serialization")
 }
 
 val BUGSNAG_ANDROID_VERSION: String by project
@@ -29,6 +30,12 @@ kotlin {
         nodejs()
     }
 
+    val commonMain by sourceSets.getting {
+        dependencies {
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+        }
+    }
+
     val androidMain by sourceSets.getting {
         dependencies {
             implementation("org.jetbrains.kotlin:kotlin-stdlib")
@@ -40,6 +47,12 @@ kotlin {
         dependencies {
             implementation("org.jetbrains.kotlin:kotlin-stdlib-js")
             implementation(npm("@bugsnag/js", "7.11.0"))
+        }
+    }
+    val darwinMain by sourceSets.getting {
+        dependencies {
+//            implementation("com.squareup.okio:okio:3.0.0")
+//            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
         }
     }
 }

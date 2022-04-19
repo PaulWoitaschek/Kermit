@@ -19,8 +19,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        Bugsnag.start(withApiKey: "PUT YOUR API KEY HERE")
+        
+        let config = BugsnagConfiguration.loadConfig()
+        
+        config.addOnSendError { (event) -> Bool in
+            
+            event.addMetadata("Acme4 Co.", key:"name", section:"account")
+            event.addMetadata(true, key:"paying_customer", section:"account")
+
+            let crashes = HelperKt.readAllCrashes()
+            
+            if(event.errors[0].stacktrace.count > 8){
+                let st = event.errors[0].stacktrace
+                for bsframe in st {
+                    print("bsframe \(bsframe.description)")
+                }
+                event.errors[0].stacktrace.removeSubrange(0...8)
+            }
+                
+            let stackCount = event.errors[0].stacktrace.count
+            
+            if(!event.errors[0].stacktrace.isEmpty){
+                let crashReport = crashes[0]
+                for frame in crashReport.frames {
+                    let bsframe = BugsnagStackframe()
+//                    bsframe.symbolAddress = NSNumber(value: frame.address)
+//                    bsframe.frameAddress = NSNumber(value: frame.address)
+//                    bsframe.machoVmAddress = NSNumber(value: frame.address)
+                    bsframe.machoLoadAddress = NSNumber(value: frame.address)
+                    bsframe.method = frame.function
+                    event.errors[0].stacktrace.append(bsframe)
+//                    stacktrace.insert(bsframe, at: 0)
+                    print("inserted \(bsframe.symbolAddress)")
+                }
+            }
+            
+            let newStackCound = event.errors[0].stacktrace.count
+            print("stackCount \(stackCount) newStackCound \(newStackCound)")
+            
+//            if(event.errors[0].stacktrace.count > 8){
+//                event.errors[0].stacktrace.removeSubrange(0...8)
+//                event.errors[0].stacktrace.insert(BugsnagStackframe, at: <#T##Int#>)
+//            }
+            
+            // Return `false` if you'd like to stop this error being reported
+            return true
+        }
+        
+        Bugsnag.start(with: config)
+        
+        let path = HelperKt.iosDirPath(folder: "crashes")
+        print("Crash path \(path)")
+        
+//        Bugsnag.notify(NSException()) { (event) -> Bool in
+//            event.addMetadata("Acme2 Co.", key:"name", section:"account")
+//            event.addMetadata(true, key:"paying_customer", section:"account")
+//
+//            return true
+//        }
         HelperKt.startKermit()
         return true
     }
