@@ -59,4 +59,16 @@ actual class CrashlyticsLogWriter actual constructor(
             cl.recordExceptionModel(exModel)
         }
     }
+
+    actual fun setCustomValue(key: String, value: Any) {
+        when (value){
+            is Int -> cl.setCustomValue(value, key)
+            is Long -> cl.setCustomValue(value, key)
+            is Float -> cl.setCustomValue(value, key)
+            is Double -> cl.setCustomValue(value, key)
+            is Boolean -> cl.setCustomValue(value, key)
+            is String -> cl.setCustomValue(value, key)
+            else -> cl.setCustomValue(value.toString(), key)
+        }
+    }
 }

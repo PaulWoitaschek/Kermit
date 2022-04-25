@@ -48,4 +48,16 @@ actual class CrashlyticsLogWriter actual constructor(
     private fun sendException(throwable: Throwable) {
         cl.recordException(throwable)
     }
+
+    actual fun setCustomValue(key: String, value: Any) {
+        when (value){
+            is Int -> cl.setCustomKey(key, value)
+            is Long -> cl.setCustomKey(key, value)
+            is Float -> cl.setCustomKey(key, value)
+            is Double -> cl.setCustomKey(key, value)
+            is Boolean -> cl.setCustomKey(key, value)
+            is String -> cl.setCustomKey(key, value)
+            else -> cl.setCustomKey(key, value.toString())
+        }
+    }
 }

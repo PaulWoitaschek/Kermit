@@ -19,4 +19,6 @@ expect class CrashlyticsLogWriter(
     minSeverity: Severity = Severity.Info,
     minCrashSeverity: Severity = Severity.Warn,
     printTag: Boolean = true
-) : LogWriter
+) : LogWriter {
+    fun setCustomValue(key:String, value:Any)
+}
