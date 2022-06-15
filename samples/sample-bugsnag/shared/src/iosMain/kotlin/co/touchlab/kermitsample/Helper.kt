@@ -25,6 +25,8 @@ fun startKermit(){
     //You may want to us a non-global logger in production, but this will work fine.
     Logger.addLogWriter(BugsnagLogWriter())
     setupBugsnagExceptionHook(Logger)
+
+    CrashStorage.writeCrashReport(IllegalStateException())
 }
 
 fun readAllCrashes():List<CrashReport> = CrashStorage.readCrashes()

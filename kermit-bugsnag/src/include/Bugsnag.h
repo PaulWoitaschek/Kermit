@@ -63,6 +63,42 @@ typedef NS_ENUM(NSUInteger, BSGBreadcrumbType) {
     BSGBreadcrumbTypeUser,
 };
 
+@interface BugsnagStackframe : NSObject
+
+    /**
+     * The Mach-O file used by the stackframe
+     */
+    @property (copy, nullable, nonatomic) NSString *machoFile;
+
+    /**
+     * A UUID identifying the Mach-O file used by the stackframe
+     */
+    @property (copy, nullable, nonatomic) NSString *machoUuid;
+
+    /**
+     * The stack frame address
+     */
+    @property (strong, nullable, nonatomic) NSNumber *frameAddress;
+
+    /**
+     * The VM address of the Mach-O file
+     */
+    @property (strong, nullable, nonatomic) NSNumber *machoVmAddress;
+
+    /**
+     * The address of the stackframe symbol
+     */
+    @property (strong, nullable, nonatomic) NSNumber *symbolAddress;
+
+    /**
+     * The load address of the Mach-O file
+     */
+    @property (strong, nullable, nonatomic) NSNumber *machoLoadAddress;
+
+  + (NSArray<BugsnagStackframe *> *)stackframesWithCallStackReturnAddresses:(NSArray<NSNumber *> *)callStackReturnAddresses;
+
+@end
+
 /**
  * Static access to a Bugsnag Client, the easiest way to use Bugsnag in your app.
  */
@@ -114,3 +150,4 @@ typedef NS_ENUM(NSUInteger, BSGBreadcrumbType) {
                            andType:(BSGBreadcrumbType)type
     NS_SWIFT_NAME(leaveBreadcrumb(_:metadata:type:));
 @end
+

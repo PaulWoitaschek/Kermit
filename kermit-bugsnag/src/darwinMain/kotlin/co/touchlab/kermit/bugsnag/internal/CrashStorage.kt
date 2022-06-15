@@ -10,23 +10,44 @@
 
 package co.touchlab.kermit.bugsnag.internal
 
+import co.touchlab.kermit.bugsnag.BugsnagStackframe
+import kotlinx.cinterop.UIntVar
+import kotlinx.cinterop.memScoped
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import platform.Foundation.NSApplicationSupportDirectory
 import platform.Foundation.NSFileManager
+import platform.Foundation.NSNumber
 import platform.Foundation.NSSearchPathForDirectoriesInDomains
 import platform.Foundation.NSString
 import platform.Foundation.NSUserDomainMask
 import platform.Foundation.stringWithContentsOfFile
 import platform.Foundation.writeToFile
+import platform.objc.class_copyMethodList
 import kotlin.math.min
+import kotlinx.cinterop.alloc
+import kotlinx.cinterop.plus
+import kotlinx.cinterop.pointed
+import kotlinx.cinterop.ptr
+import kotlinx.cinterop.toKString
+import kotlinx.cinterop.value
+import platform.objc.method_getName
+import platform.objc.sel_getName
 
 
 @Serializable
 data class CrashReport(val frames:List<StackFrame>)
 
 @Serializable
-data class StackFrame(val address:Long, val function: String)
+data class StackFrame(
+    val symbolAddress:Long?,
+    val frameAddress:Long?,
+    val machoVmAddress:Long?,
+    val machoLoadAddress:Long?,
+    val machoFile:String?,
+    val machoUuid:String?,
+    val function: String?
+    )
 
 object CrashStorage {
     fun writeCrashReport(t: Throwable){
@@ -36,15 +57,37 @@ object CrashStorage {
 
     fun readCrashes(): List<CrashReport> {
         val path = iosDirPath("crashes")
-        val json = NSString.stringWithContentsOfFile("$path/acrash.json")
-        return listOf(Json.decodeFromString(CrashReport.serializer(), json as String))
+        val crashReports = try {
+            val json = NSString.stringWithContentsOfFile("$path/acrash.json")
+            listOf(Json.decodeFromString(CrashReport.serializer(), json as String))
+        } catch (t:Throwable) {
+            emptyList()
+        }
+        return crashReports
     }
 
     private fun crashReportFromThrowable(t:Throwable):CrashReport{
         val addresses = t.getStackTraceAddresses()
+        val stackFrames = BugsnagStackframe.stackframesWithCallStackReturnAddresses(addresses.map { NSNumber(long = it) }) as List<BugsnagStackframe>
+        val framesByFrameAddress = stackFrames.filter { it.frameAddress != null }.associateBy {it.frameAddress!!.longValue}
         val functions = t.getStackTrace()
         val arrayLength = min(addresses.size, functions.size)
-        val frames = (0 until arrayLength).map { index -> StackFrame(addresses[index], functions[index]) }
+        val frames = (0 until arrayLength).mapNotNull { index ->
+            val frame = framesByFrameAddress.get(addresses[index])
+            if (frame != null) {
+                StackFrame(
+                    symbolAddress = frame.symbolAddress?.longValue,
+                    frameAddress = frame.frameAddress?.longValue,
+                    machoVmAddress =  frame.machoVmAddress?.longValue,
+                    machoLoadAddress =  frame.machoLoadAddress?.longValue,
+                    machoFile = frame.machoFile,
+                    machoUuid = frame.machoUuid,
+                    functions[index].substring(59)
+                )
+            } else {
+                null
+            }
+        }
 
         return CrashReport(frames)
     }

@@ -43,24 +43,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let crashReport = crashes[0]
                 for frame in crashReport.frames {
                     let bsframe = BugsnagStackframe()
-//                    bsframe.symbolAddress = NSNumber(value: frame.address)
-//                    bsframe.frameAddress = NSNumber(value: frame.address)
-//                    bsframe.machoVmAddress = NSNumber(value: frame.address)
-                    bsframe.machoLoadAddress = NSNumber(value: frame.address)
+                    bsframe.symbolAddress = frame.symbolAddress
+                    bsframe.frameAddress =  frame.frameAddress
+                    bsframe.machoVmAddress = frame.machoVmAddress
+                    bsframe.machoLoadAddress = frame.machoLoadAddress
+                    bsframe.machoFile = frame.machoFile
+                    bsframe.machoUuid = frame.machoUuid
                     bsframe.method = frame.function
                     event.errors[0].stacktrace.append(bsframe)
-//                    stacktrace.insert(bsframe, at: 0)
-                    print("inserted \(bsframe.symbolAddress)")
+                    print("inserted-method: \(bsframe.method), inserted-symbolAddress: \(bsframe.symbolAddress)")
                 }
             }
-            
-            let newStackCound = event.errors[0].stacktrace.count
-            print("stackCount \(stackCount) newStackCound \(newStackCound)")
-            
-//            if(event.errors[0].stacktrace.count > 8){
-//                event.errors[0].stacktrace.removeSubrange(0...8)
-//                event.errors[0].stacktrace.insert(BugsnagStackframe, at: <#T##Int#>)
-//            }
             
             // Return `false` if you'd like to stop this error being reported
             return true

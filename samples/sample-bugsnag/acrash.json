@@ -1,0 +1,340 @@
+{
+  "frames": [
+    {
+      "symbolAddress": null,
+      "frameAddress": 4563092297,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:kotlin.Throwable#<init>(kotlin.String?){} + 88 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4563067959,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:kotlin.Exception#<init>(kotlin.String?){} + 86 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4563068343,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:kotlin.RuntimeException#<init>(kotlin.String?){} + 86 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4563069479,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:kotlin.IllegalStateException#<init>(kotlin.String?){} + 86 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562802477,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:co.touchlab.kermitsample.CrashBot.okCrash#internal + 140 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562802313,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:co.touchlab.kermitsample.CrashBot.goCrash3#internal + 56 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562802735,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:co.touchlab.kermitsample.CrashBot.<init>$lambda-0#internal + 238 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562802829,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:co.touchlab.kermitsample.CrashBot.$<init>$lambda-0$FUNCTION_REFERENCE$0.invoke#internal + 60 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562803053,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:co.touchlab.kermitsample.CrashBot.$<init>$lambda-0$FUNCTION_REFERENCE$0.$<bridge-UNN>invoke(){}#internal + 60 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562801316,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:co.touchlab.kermitsample.CrashBot.internalDispatch#internal + 211 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562801001,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "kfun:co.touchlab.kermitsample.CrashBot#goCrash(){} + 56 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562889980,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "objc2kotlin.467 + 139 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562788251,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "$s15KermitSampleIOS11ContentViewV4bodyQrvg7SwiftUI05TupleE0VyAE6ButtonVyAE0E0PAEE4fontyQrAE4FontVSgFQOyAkEE15foregroundColoryQrAE0N0VSgFQOyAkEE10background_9alignmentQrqd___AE9AlignmentVtAeJRd__lFQOyAkEE7paddingyQrAE4EdgeO3SetV_12CoreGraphics7CGFloatVSgtFQOyAE4TextV_Qo__ARQo__Qo__Qo_G_A11_A11_A11_tGyXEfU_yycfU3_ + 58 (/Users/kgalligan/devel/Kermit/samples/sample-bugsnag/KermitSampleIOS/KermitSampleIOS/ContentView.swift:45:24)"
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734747509048,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$s7SwiftUI18WrappedButtonStyle33_AEEDD090E917AC57C12008D974DC6805LLV8makeBody13configurationQrAA09PrimitivedE13ConfigurationV_tFyycAHcfu_yycfu0_TA + 16 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734752778405,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$s7SwiftUI25PressableGestureCallbacksV8dispatch5phase5stateyycSgAA0D5PhaseOyxG_SbztFyycfU_ + 31 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734748645211,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$sIeg_ytIegr_TR + 11 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734745321991,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$sIeg_ytIegr_TRTA + 16 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734745629014,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$sIeg_ytIegr_TRTA.5492 + 8 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734748645231,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$sytIegr_Ieg_TR + 11 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734748645211,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$sIeg_ytIegr_TR + 11 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734745321991,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$sIeg_ytIegr_TRTA + 16 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734745629025,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$sIeg_ytIegr_TRTA.5500 + 8 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734748488452,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$s7SwiftUI6UpdateO3endyyFZ + 483 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734749462435,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$s7SwiftUI19EventBindingManagerC4sendyySDyAA0C2IDVAA0C4Type_pGF + 276 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734754731088,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$s7SwiftUI18EventBindingBridgeC4send_6sourceySDyAA0C2IDVAA0C4Type_pG_AA0cD6Source_ptFTf4nen_nAA22UIKitGestureRecognizerC_Tg5 + 1808 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734754724300,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$s7SwiftUI22UIKitGestureRecognizerC4send025_062C14327F4C9197D92807A7H6DF7F3BLL7touches5event5phaseyShySo7UITouchCG_So7UIEventCAA10EventPhaseOtF + 65 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734754726249,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$s7SwiftUI22UIKitGestureRecognizerC12touchesBegan_4withyShySo7UITouchCG_So7UIEventCtFToTm + 130 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140734754724436,
+      "machoVmAddress": 140734743801856,
+      "machoLoadAddress": 140734743801856,
+      "function": "$s7SwiftUI22UIKitGestureRecognizerC12touchesEnded_4withyShySo7UITouchCG_So7UIEventCtFTo + 39 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733809103461,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "-[UIGestureRecognizer _componentsEnded:withEvent:] + 216 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733815143536,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "-[UITouchesEvent _sendEventToGestureRecognizer:] + 661 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733809054643,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "__47-[UIGestureEnvironment _updateForEvent:window:]_block_invoke + 69 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733809053757,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "-[UIGestureEnvironment _updateForEvent:window:] + 520 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733814811907,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "-[UIWindow sendEvent:] + 5266 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733814642102,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "-[UIApplication sendEvent:] + 818 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733815256303,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "__dispatchPreprocessedEventFromEventQueue + 8682 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733815266421,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "__processEventQueue + 8578 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733815227431,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "__eventFetcherSourceCallback + 239 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733733850645,
+      "machoVmAddress": 140733733322752,
+      "machoLoadAddress": 140733733322752,
+      "function": "__CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 16 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733733850381,
+      "machoVmAddress": 140733733322752,
+      "machoLoadAddress": 140733733322752,
+      "function": "__CFRunLoopDoSource0 + 179 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733733847522,
+      "machoVmAddress": 140733733322752,
+      "machoLoadAddress": 140733733322752,
+      "function": "__CFRunLoopDoSources0 + 241 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733733824833,
+      "machoVmAddress": 140733733322752,
+      "machoLoadAddress": 140733733322752,
+      "function": "__CFRunLoopRun + 874 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733733822707,
+      "machoVmAddress": 140733733322752,
+      "machoLoadAddress": 140733733322752,
+      "function": "CFRunLoopRunSpecific + 566 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733941636307,
+      "machoVmAddress": 140733941620736,
+      "machoLoadAddress": 140733941620736,
+      "function": "GSEventRunModal + 138 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733814513474,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "-[UIApplication _run] + 927 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 140733814532958,
+      "machoVmAddress": 140733801086976,
+      "machoLoadAddress": 140733801086976,
+      "function": "UIApplicationMain + 100 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4562773983,
+      "machoVmAddress": 4294967296,
+      "machoLoadAddress": 4562755584,
+      "function": "main + 62 (/Users/kgalligan/devel/Kermit/samples/sample-bugsnag/KermitSampleIOS/KermitSampleIOS/AppDelegate.swift:<unknown>)"
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4571102953,
+      "machoVmAddress": null,
+      "machoLoadAddress": null,
+      "function": "0x0 + 4571102952 "
+    },
+    {
+      "symbolAddress": null,
+      "frameAddress": 4767528222,
+      "machoVmAddress": null,
+      "machoLoadAddress": null,
+      "function": "0x0 + 4767528221 "
+    }
+  ]
+}
